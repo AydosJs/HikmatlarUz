@@ -1,0 +1,571 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.min.css" />
+  <title>Hikmarlar.uz</title>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="h-16 flex items-center justify-center border-b">
+    <div class="container px-6 md:px-24 lg:px-48 xl:px-72">
+      <div class="flex flex-row justify-between
+      items-center w-full">
+
+        <a href="index.html" class="cursor-pointer">
+          <img src="./assets/svg-logo-01.svg" width="160px" alt="LOGO">
+        </a>
+
+        <!-- Mobile menu toggle, controls the 'mobileMenuOpen' state. -->
+        <button type="button" class="md:hidden p-2 rounded-md text-gray-900" onclick="show()">
+          <span class="sr-only">Open menu</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+
+        <div class="hidden md:flex space-x-8 items-center">
+          <a class="py-2" href="index.html" data-tooltip-target="home" data-tooltip-placement="bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+            <div id="home" role="tooltip"
+              class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-800 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+              Bosh sahifa
+              <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+          </a>
+          <a class="py-2" href="RandomQuotes.html" data-tooltip-target="random" data-tooltip-placement="bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600 hover:text-gray-900" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+            <div id="random" role="tooltip"
+              class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-800 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+              Tasodifiy tartibda
+              <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+          </a>
+          <a class="py-2" href="Authors.html" data-tooltip-target="authors" data-tooltip-placement="bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600 hover:text-gray-900" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            <div id="authors" role="tooltip"
+              class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-800 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+              Mualliflar
+              <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+          </a>
+          <a class="py-2" href="Keys.html" data-tooltip-target="keys" data-tooltip-placement="bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600 hover:text-gray-900" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+            </svg>
+
+            <div id="keys" role="tooltip"
+              class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-800 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+              Kalit So'zlar
+              <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+          </a>
+          <a class="py-2" href="FavoriteQuotes.html" data-tooltip-target="favorite" data-tooltip-placement="bottom">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600 hover:text-gray-900" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+            </svg>
+            <div id="favorite" role="tooltip"
+              class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-800 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+              Sevimli hikmatlar
+              <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+          </a>
+
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <section class="flex justify-center py-6 " style="min-height: calc(100vh - 176px);">
+    <div class="container px-6 md:px-24 lg:px-48 xl:px-72">
+      <!-- IMAGE -->
+      <div class="sm:bg-primary-light py-6 mb-4 rounded-md overflow-hidden flex justify-center">
+        <!-- <img class="object-cover h-60 w-full"
+          src="https://image.freepik.com/free-vector/realistic-objective-background_79603-1821.jpg" /> -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="284.696" height="286.813" viewBox="0 0 284.696 286.813">
+          <g id="Group_82" data-name="Group 82" transform="translate(0 0)">
+            <path id="Path_27" data-name="Path 27" d="M60.29,406.356l5.259,2.538,12.294-19.077-7.762-3.746Z"
+              transform="translate(-33.845 -216.728)" fill="#ffb6b6" />
+            <path id="Path_28" data-name="Path 28"
+              d="M328.839,559.3l16.172,7.806.1-.2a6.99,6.99,0,0,0-3.256-9.333h0l-1.872-3.667-6.594-.419-1.412-.681Z"
+              transform="translate(-305.228 -364.272)" fill="#2f2e41" />
+            <path id="Path_29" data-name="Path 29" d="M149.534,419.7h5.839l2.778-22.525h-8.619Z"
+              transform="translate(-83.943 -222.962)" fill="#ffb6b6" />
+            <path id="Path_30" data-name="Path 30"
+              d="M424.076,572.99h17.958v-.227a6.99,6.99,0,0,0-6.989-6.99h0l-3.28-2.489-6.12,2.489h-1.568Z"
+              transform="translate(-358.691 -370.159)" fill="#2f2e41" />
+            <path id="Path_31" data-name="Path 31"
+              d="M386.628,329.764l6.692,46.146.569,10.372-3.509,32.367,1.424,3.136-3.98,2.455h-8.1l-.43-34.19-6.073-28.635-.939,32.456-1.3,2.508c-4.843,10.988-11.367,14.586-15.98,22.8l-8.1-4.387.17-3.272c-1.627-.824,2.443-3.231,2.834-5.013l.708-3.189,4.725-9.787.18-3.446-1.293-23.441.608-31.566,10.624-8.124Z"
+              transform="translate(-315.249 -237.491)" fill="#2f2e41" />
+            <circle id="Ellipse_16" data-name="Ellipse 16" cx="10.522" cy="10.522" r="10.522"
+              transform="translate(50.679 5.808)" fill="#ffb6b6" />
+            <path id="Path_32" data-name="Path 32"
+              d="M386.234,260.893a59.271,59.271,0,0,1-24.42-5.3l-.123-.063.038-.133c.372-1.3.725-3.492.087-3.811a.437.437,0,0,1-.272-.321c-.037-.262.226-.5.589-.834.705-.644,1.671-1.526,1.1-2.942-1-2.5,1.809-15.29,1.991-16.11l-1.2-20.393a16.964,16.964,0,0,1,12.544-17.336l.027-.007.028,0c.39.022.8-1.3,1.116-2.272.463-1.433.768-2.313,1.289-2.275,4.035.26,6.724.43,8.515.542,3.4.211,3.992,4.343,4.065,5a20.325,20.325,0,0,1,9.213,21.993l-1.693,7.28-1.5,3.5.493,6.9c2.321,1.93,1.656,5.878,1.524,6.545a4.577,4.577,0,0,1,.524,5.55,5.391,5.391,0,0,1,.972,5.027l2.037,6.619-.154.054A50.838,50.838,0,0,1,386.234,260.893Z"
+              transform="translate(-323.586 -160.103)" fill="#3f3d56" />
+            <path id="Path_33" data-name="Path 33"
+              d="M502.176,193.282a4.1,4.1,0,0,0-6.277-.242l-33.272.181-9.453,4.567-1.226,5.234,15.275-.639,29.156-3.33a4.119,4.119,0,0,0,5.8-5.771Z"
+              transform="translate(-374.337 -161.559)" fill="#ffb6b6" />
+            <path id="Path_34" data-name="Path 34"
+              d="M449.176,204.344l-12.951,6.127-12.007-5.026-.012-.1a8.947,8.947,0,0,1,4.541-8.957,24.5,24.5,0,0,1,8.07-2.794c7.942-1.181,9.553-1.635,9.568-1.64l.175-.051Z"
+              transform="translate(-358.723 -161.679)" fill="#3f3d56" />
+            <path id="Path_35" data-name="Path 35"
+              d="M388.8,145.939a1.186,1.186,0,0,1-.382-.062,2.5,2.5,0,0,1-1.155-1.026c-1.865-2.682-2.766-6.258-2.676-10.629a11.106,11.106,0,0,1,1.542-6.1c1.089-1.585,3.292-2.842,5.345-2.211a2.219,2.219,0,0,1,1.107-2.049,5.816,5.816,0,0,1,2.539-.641,22.7,22.7,0,0,1,6.352,0,7.749,7.749,0,0,1,5.311,3.348l.021.053.2.995a.945.945,0,0,0,1.258.694.857.857,0,0,1,1.15.925l-.057.4.6-.111a.857.857,0,0,1,.962,1.14l-.168.455a.9.9,0,0,1,.656.289.829.829,0,0,1,.112.977,7.767,7.767,0,0,1-2.743,2.76,6.484,6.484,0,0,1-2,.788,38.506,38.506,0,0,1-13.969.42,7.876,7.876,0,0,1,.312,2.828,2.972,2.972,0,0,1-1.784,2.507,4.3,4.3,0,0,1-.652.157,3.824,3.824,0,0,0-.622.151,1.821,1.821,0,0,0-.533,3.113l.461-.48-.15.611a.876.876,0,0,1-.447.556A1.228,1.228,0,0,1,388.8,145.939Z"
+              transform="translate(-336.518 -122.995)" fill="#2f2e41" />
+            <ellipse id="Ellipse_17" data-name="Ellipse 17" cx="60.093" cy="59.175" rx="60.093" ry="59.175"
+              transform="translate(62.649 32.836)" fill="#e6e6e6" />
+            <path id="Path_36" data-name="Path 36"
+              d="M540.907,270.011a48.225,48.225,0,0,1-4.563,20.531c-.093.2-.188.4-.284.594a49.576,49.576,0,0,1-21.379,22.079c-.195.1-.39.2-.584.3a50.176,50.176,0,0,1-22.981,5.524,50.967,50.967,0,0,1-8.274-.674c-.218-.036-.436-.073-.651-.112a49.924,49.924,0,0,1-26.919-14.218c-.152-.155-.3-.314-.459-.472a48.585,48.585,0,0,1-12.976-26.494c-.03-.218-.063-.436-.089-.654A48.513,48.513,0,0,1,447.139,247c.1-.195.211-.39.317-.581a49.529,49.529,0,0,1,15.281-16.7c.182-.125.363-.248.545-.37a49.978,49.978,0,0,1,20.266-7.809c.218-.03.436-.063.654-.092a50.8,50.8,0,0,1,6.914-.469,50.234,50.234,0,0,1,21.1,4.606c.2.092.4.185.6.281A49.816,49.816,0,0,1,529,238.2c.145.165.291.333.429.5a48.464,48.464,0,0,1,10.651,22.363v0c.043.215.079.429.115.647A48.461,48.461,0,0,1,540.907,270.011Z"
+              transform="translate(-368.374 -178)" fill="#fff" />
+            <path id="Path_37" data-name="Path 37"
+              d="M566.047,304.549a6.094,6.094,0,0,1,1.288,2.947l23.99-4.525a29.878,29.878,0,0,0-6.554-13.828Z"
+              transform="translate(-438.389 -216.265)" fill="#6c63ff" />
+            <path id="Path_38" data-name="Path 38"
+              d="M545.672,288.37c-.03-.218-.069-.432-.109-.647v0a30.552,30.552,0,0,0-6.689-14.128c-.142-.168-.287-.337-.433-.5a31.479,31.479,0,0,0-9.859-7.528h0c-.2-.1-.393-.192-.594-.284a31.772,31.772,0,0,0-17.618-2.6c-.218.026-.436.059-.654.1a31.381,31.381,0,0,0-12.194,4.682c-.185.119-.37.241-.551.366a31.228,31.228,0,0,0-9.78,10.691q-.158.287-.317.584a30.415,30.415,0,0,0-3.19,18.411q.04.332.1.654a30.552,30.552,0,0,0,8.086,16.185c.149.159.3.317.459.472a31.428,31.428,0,0,0,16.525,8.756c.218.043.436.079.654.116a31.807,31.807,0,0,0,19.583-3c.195-.1.386-.2.581-.307h0A31.251,31.251,0,0,0,542.9,306.777q.149-.3.287-.594a30.378,30.378,0,0,0,2.49-17.813Zm-3.091,17.539q-.139.3-.287.594a30.625,30.625,0,0,1-12.936,13.3c-.195.1-.39.2-.584.3a31.071,31.071,0,0,1-19.157,2.935c-.218-.033-.439-.069-.654-.112a30.761,30.761,0,0,1-16.152-8.555c-.158-.155-.31-.314-.462-.472a29.95,29.95,0,0,1-7.914-15.816c-.036-.215-.069-.433-.1-.65a29.788,29.788,0,0,1,3.117-18.015c.1-.195.2-.39.314-.584a30.586,30.586,0,0,1,9.588-10.473c.182-.125.363-.248.548-.363a30.743,30.743,0,0,1,11.9-4.57c.215-.036.433-.069.654-.1a31.078,31.078,0,0,1,17.242,2.546c.2.089.4.185.594.281a30.769,30.769,0,0,1,9.638,7.35c.145.165.29.333.429.5a29.878,29.878,0,0,1,6.554,13.828c.04.215.076.429.109.65a29.759,29.759,0,0,1-2.443,17.417Z"
+              transform="translate(-391.983 -201.242)" fill="#ccc" />
+            <path id="Path_39" data-name="Path 39"
+              d="M516.225,275.8l-.538.383-14.538-20.346-.386-.538-10.622-14.865c.182-.125.363-.248.545-.37l10.628,14.868.383.541Z"
+              transform="translate(-395.778 -188.712)" fill="#ccc" />
+            <path id="Path_40" data-name="Path 40"
+              d="M493.664,300.276l-.32.581-22.059-12.118-.581-.32-16.123-8.859c.1-.195.211-.39.317-.581l16.123,8.855.578.32Z"
+              transform="translate(-375.816 -210.559)" fill="#ccc" />
+            <path id="Path_41" data-name="Path 41"
+              d="M486.483,336.232l-25.117,2.945-.654.079-18.335,2.149c-.03-.218-.063-.436-.089-.654l18.325-2.149.654-.076,25.14-2.948Z"
+              transform="translate(-368.915 -242.332)" fill="#ccc" />
+            <path id="Path_42" data-name="Path 42"
+              d="M504.825,341.506,486.464,358.52l-.485.449-13.445,12.458c-.152-.155-.3-.314-.459-.472L485.52,358.5l.482-.449,18.374-17.027Z"
+              transform="translate(-385.636 -245.387)" fill="#ccc" />
+            <path id="Path_43" data-name="Path 43"
+              d="M579.431,231.761,571.6,248.218h0l-.284.6-10.711,22.5-.594-.284,10.711-22.5.284-.6,7.835-16.453C579.034,231.573,579.233,231.665,579.431,231.761Z"
+              transform="translate(-434.996 -183.895)" fill="#ccc" />
+            <path id="Path_44" data-name="Path 44"
+              d="M598.09,260.73l-14.161,11.652-.512.423-19.358,15.928-.419-.509L582.988,272.3l.508-.419,14.165-11.655C597.806,260.393,597.951,260.562,598.09,260.73Z"
+              transform="translate(-437.037 -200.033)" fill="#ccc" />
+            <path id="Path_45" data-name="Path 45"
+              d="M610.788,313.011l-18.13,3.417-.647.122-24.81,4.679-.122-.647L591.9,315.9l.647-.119v0l18.123-3.414C610.716,312.578,610.752,312.793,610.788,313.011Z"
+              transform="translate(-438.968 -229.3)" fill="#ccc" />
+            <path id="Path_46" data-name="Path 46"
+              d="M606.36,356.345c-.092.2-.188.4-.284.594l-16.773-7.6-.6-.274L566.048,338.8l.274-.6,22.667,10.272.6.274Z"
+              transform="translate(-438.39 -243.803)" fill="#ccc" />
+            <path id="Path_47" data-name="Path 47"
+              d="M581.311,381.828c-.195.1-.39.2-.584.3l-8.618-16.07-.314-.584-11.777-21.964.581-.31,11.781,21.97.31.581h0Z"
+              transform="translate(-435.005 -246.613)" fill="#ccc" />
+            <path id="Path_48" data-name="Path 48"
+              d="M542.459,344.979l-4.15,24.367L538.2,370l-3.054,17.915c-.218-.036-.436-.073-.65-.112l3.051-17.919.112-.65,4.15-24.367Z"
+              transform="translate(-420.675 -247.547)" fill="#ccc" />
+            <path id="Path_49" data-name="Path 49"
+              d="M544.384,265.309l-.654.092-3.5-24.612-.092-.654-2.556-17.995c.218-.03.436-.063.654-.092l2.556,17.991.092.654Z"
+              transform="translate(-422.412 -178.601)" fill="#ccc" />
+            <ellipse id="Ellipse_18" data-name="Ellipse 18" cx="6.273" cy="6.178" rx="6.273" ry="6.178"
+              transform="translate(116.468 85.833)" fill="#3f3d56" />
+            <path id="Path_50" data-name="Path 50" d="M545.761,580.3l-4.7,3.931L523.665,568l6.93-5.8Z"
+              transform="translate(-293.969 -315.597)" fill="#a0616a" />
+            <path id="Path_51" data-name="Path 51"
+              d="M837.913,729.9l-14.44,12.091-.153-.183a7.331,7.331,0,0,1,.914-10.326h0l.962-4.21,6.6-2.12,1.26-1.055Z"
+              transform="translate(-581.854 -460.436)" fill="#2f2e41" />
+            <path id="Path_52" data-name="Path 52" d="M466.827,607.432H460.7l-2.914-23.623h9.039Z"
+              transform="translate(-256.988 -327.732)" fill="#a0616a" />
+            <path id="Path_53" data-name="Path 53"
+              d="M729.792,762.2H710.958v-.238a7.331,7.331,0,0,1,7.33-7.33h0l3.44-2.61,6.419,2.61h1.644Z"
+              transform="translate(-519.738 -476.109)" fill="#2f2e41" />
+            <path id="Path_54" data-name="Path 54"
+              d="M738.205,501.886c1.48,1.849.74,8.137.74,8.137l.363,39.158c6.288,5.178,11.1,26.677,11.1,26.677l6,11.046c-.74,2.219-5.539,10.9-7.018,10.527-.686-.172-9.231-8.052-14.914-19.738-6.564-13.5-10.332-31.053-10.332-31.053s.74,50.3.74,52.52-9.986,1.11-12.205,1.11-13.642-90.616-13.642-90.616v-5.178l1.849-2.589S736.726,500.037,738.205,501.886Z"
+              transform="translate(-513.048 -335.231)" fill="#2f2e41" />
+            <path id="Path_55" data-name="Path 55"
+              d="M601.325,300.784l-4.485,2.093,5-1.047s3.673.149,3.673-1.346l5.98-3.289s5.083,2.691,6.578,1.2-1.2-4.485-1.2-4.485,1.8-.994,1.648-1.394-2.545.2-2.545.2-5.681-3.289-5.382,2.392l-5.98,3.965S601.624,298.99,601.325,300.784Z"
+              transform="translate(-455.675 -217.736)" fill="#3f3d56" />
+            <path id="Path_56" data-name="Path 56"
+              d="M739.018,432.711c-7.849,3.894-17.189,5.072-25.987,4.038-7.584-.893-9.161-9.367-16.2-12.373a45.52,45.52,0,0,0,1.875-17.257c-.643-4.066-.763-32.4,1.593-35.355,3.09-3.872,7.806-5.94,7.592-10.889l.661.678c-.835-2.2.782-4.712,2.911-5.705s4.588-.868,6.934-.721l5.925.371a5.326,5.326,0,0,0,.8,4.8c3.5-.966,7.193,1.6,8.757,4.876s1.526,7.057,1.455,10.687c-.081,4.2,3.032,33.692-.734,35.559,1.942.489,4.687,10.847,3.03,9.725C738.394,421.682,738.209,426.7,739.018,432.711Z"
+              transform="translate(-511.807 -253.25)" fill="#6c63ff" />
+            <path id="Path_57" data-name="Path 57"
+              d="M613.445,300.887a6.034,6.034,0,0,1,7.7,5.131l33.3,29.282-6.014,4-33.055-26.515a6.067,6.067,0,0,1-1.935-11.893Z"
+              transform="translate(-462.529 -222.72)" fill="#a0616a" />
+            <path id="Path_58" data-name="Path 58"
+              d="M671.757,342.82c-.729.042-17.941-12.517-18.381-11.934l-1.157,6.273h0l-3.181,4.207h0l6.877,7.291,1.965,1.612,1.263,1.336c-.442.591,2.491,3.758,2.65,4.481a2.528,2.528,0,0,0,1.257,1.681l11.191,6.072a7.019,7.019,0,1,0,8.4-11.248l-1.651-1.67-2.528-2.563-4.732-4.792A2.515,2.515,0,0,0,671.757,342.82Z"
+              transform="translate(-484.977 -239.687)" fill="#6c63ff" />
+            <circle id="Ellipse_19" data-name="Ellipse 19" cx="12.14" cy="12.14" r="12.14"
+              transform="translate(193.206 74.279)" fill="#a0616a" />
+            <path id="Path_59" data-name="Path 59"
+              d="M738.541,297.458c-.675-2.679-3.193-5.016-5.943-4.745a5.16,5.16,0,0,0-2.886-5.115,9.8,9.8,0,0,0-6.128-.676,36.46,36.46,0,0,0-3.557.831c-.993.267-5.651-1.327-6.638-1.036-.844.249-2.874,3.272-3.515,3.875a2.056,2.056,0,0,0-.552,2.387,2.714,2.714,0,0,0,2.255,1.077,5.113,5.113,0,0,1,2.514.547,3.394,3.394,0,0,1,1.148,2.994,15.2,15.2,0,0,0-.085,3.338c.208,1.1,1.1,2.192,2.21,2.117a2.558,2.558,0,0,1,3.314-.079,4.215,4.215,0,0,1,1.44,3.211,13.058,13.058,0,0,1-.56,3.579c-.2.8-.352,1.773.242,2.348a2.4,2.4,0,0,0,1.215.507c1.753.372,8.33-.133,10.083.24l-.136-.268c1.27-2.454,2.955-4.675,4.2-7.14S739.216,300.137,738.541,297.458Z"
+              transform="translate(-518.713 -214.884)" fill="#2f2e41" />
+            <path id="Path_60" data-name="Path 60"
+              d="M795.065,474.913a6.034,6.034,0,0,1-4.125-8.282l-14.313-41.973,7.2-.472,15.474,39.449a6.067,6.067,0,0,1-4.241,11.278Z"
+              transform="translate(-556.602 -292.074)" fill="#a0616a" />
+            <path id="Path_61" data-name="Path 61"
+              d="M762.47,407.441c.653.327,9.331,19.785,10,19.5l4.125-4.865h0l4.853-2.066h0l-2.337-9.746-.9-2.376-.431-1.787c.677-.293-.29-4.5-.069-5.206a2.528,2.528,0,0,0-.253-2.083l-6.685-10.836a7.019,7.019,0,1,0-12.883,5.576l.6,2.27.918,3.481,1.719,6.511A2.514,2.514,0,0,0,762.47,407.441Z"
+              transform="translate(-545.759 -269.37)" fill="#6c63ff" />
+            <path id="Path_62" data-name="Path 62"
+              d="M874.094,747l-3.382-5.435-.676,3.106c-.118.544-.237,1.1-.346,1.645-.961-.82-1.983-1.579-2.983-2.307q-4.606-3.342-9.207-6.694l.961,5.571a39.524,39.524,0,0,0,2.676,10.067c.162.355.338.706.526,1.048h14.273a4.594,4.594,0,0,0,.237-.983.35.35,0,0,0,0-.066C876.4,750.821,875.225,748.816,874.094,747Z"
+              transform="translate(-602.001 -467.852)" fill="#f0f0f0" />
+            <path id="Path_63" data-name="Path 63"
+              d="M767.406,775.232l-120.953.135a.522.522,0,0,1,0-1.045l120.953-.135a.522.522,0,1,1,0,1.044Z"
+              transform="translate(-483.233 -488.554)" fill="#cacaca" />
+            <path id="Path_64" data-name="Path 64"
+              d="M503.172,556.524l-3.382-5.435-.675,3.106c-.118.544-.237,1.1-.347,1.645-.961-.82-1.983-1.579-2.983-2.307q-4.606-3.342-9.207-6.693l.961,5.571a39.525,39.525,0,0,0,2.676,10.067c.162.355.338.706.526,1.048h14.273a4.6,4.6,0,0,0,.237-.983.339.339,0,0,0,0-.066C505.48,560.349,504.3,558.344,503.172,556.524Z"
+              transform="translate(-393.778 -360.927)" fill="#f0f0f0" />
+            <path id="Path_65" data-name="Path 65"
+              d="M396.484,584.759l-120.953.135a.522.522,0,1,1,0-1.044l120.953-.135a.522.522,0,0,1,0,1.045Z"
+              transform="translate(-275.01 -381.628)" fill="#cacaca" />
+            <path id="Path_66" data-name="Path 66"
+              d="M407.254,291.481a4.1,4.1,0,0,1-2.347-5.826l-11.062-31.38,1.108-10.44,4.513-2.921,4.555,14.594,6.708,28.568a4.119,4.119,0,0,1-3.475,7.405Z"
+              transform="translate(-341.721 -189.191)" fill="#ffb6b6" />
+            <path id="Path_67" data-name="Path 67" d="M105.247,94.362l10.462-4.049,6.074,20.248L107.763,115Z"
+              transform="translate(-59.083 -50.699)" fill="#3f3d56" />
+          </g>
+        </svg>
+
+      </div>
+      <!-- TITLE -->
+      <p class="text-md mt-6 text-gray font-medium mb-4">Loyiha Hadiqa</p>
+      <p class="text-gray-900 font-medium mb-4">
+        <a href="#" class="text-black font-bold ">Hikmatlar.uz</a> da buyuklar bilan yaqin bo'ling. Buyuk olimu
+        ulamolar,
+        barcha
+        sohadagi
+        yetuk mutaxassislar va shu kabi
+        ustozlarning fikr-mulohazalarini, maslahatu-tajribalarini har bir kishi hayotida qo'llasa, o'ylaymizki
+        anchagina
+        muvafaqqiyatlarga erishadi.
+      </p>
+      <p class="text-gray-900 font-medium mb-4">
+        Chunki ular tinimsiz mehnat qilishgan, ilm o'rganishgan, izlanishgan, ko'pgina mashaqqatlarni yengib o'tishgan
+        va shularni natijasi o'laroq anchagina yutuqlarga erishgan, tarixda iz qoldirgan va dunyoni titratgan.
+        O'zlarini
+        tutishda, odobda, ilmda, tajribada va yana ko'plab jihatlarda ulamolarimiz hammaga o'rnak bo'ladi.
+      </p>
+      <p class="text-gray-900 font-medium mb-4">
+        Yana bir narsaga alohida e'tibor berish kerakki, buyuklarimiz ham biz kabi oddiy inson bo'lishgan. Demakki,
+        bizdan ham olimlar va kamida yetuk mutaxassislar chiqadi. Shunday ekan farzandlarimizdan ham shunaqa olimlar
+        chiqishida buyuklarimizni o'rganib borishimiz kerak.
+      </p>
+      <p class="text-gray-900 font-medium mb-4">
+        Shu o'rinda gapimizni quvvatlash maqsadida ba'zi mulohazalarni keltirib o'tsak:
+      </p>
+      <!-- QUOTES -->
+      <div class="w-full flex flex-col items-center mb-4">
+
+        <div
+          class="first:border-t group w-full border-b border-gray-200 cursor-pointer lg:hover:bg-gray-100 py-6 lg:p-4">
+          <a href="QuoteDetales.html">
+            <p class="text-sm break-normal font-semibold text-gray-900
+                line-clamp-3 mb-2">
+              Yaxshi va yomon xulqning hammasi sharoit, tarbiya,
+              odatlanish natijasida vujudga keladi. Yaxshi xulqqa ham
+              odat tufayli erishiladi.
+              Yaxshi va yomon xulqning hammasi sharoit, tarbiya,
+              odatlanish natijasida vujudga keladi. Yaxshi xulqqa ham
+              odat tufayli erishiladi.ss
+            </p>
+            <div class="flex flex-row items-center justify-between flex-nowrap ">
+              <div>
+                <p class="text-gray-400 font-medium text-sm line-clamp-1">Abu
+                  Ali Ibn Sino</p>
+              </div>
+              <div class="flex flex-nowrap items-center space-x-4 hidden lg:block">
+                <button data-tooltip-target="tooltip-default" type="button"
+                  class="rounded-full p-1 text-center text-gray-400 hover:text-gray-900 lg:invisible group-hover:visible">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 " fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </button>
+                <div id="tooltip-default" role="tooltip"
+                  class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+                  Sevimlilay safiga qo'shish
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="group w-full border-b border-gray-200 cursor-pointer lg:hover:bg-gray-100 py-6 lg:p-4">
+          <a href="QuoteDetales.html">
+            <p class="text-sm break-normal font-semibold text-gray-900
+                line-clamp-3 mb-2">
+              Yaxshi va yomon xulqning hammasi sharoit, tarbiya,
+              odatlanish natijasida vujudga keladi. Yaxshi xulqqa ham
+              odat tufayli erishiladi.
+              Yaxshi va yomon xulqning hammasi sharoit, tarbiya,
+              odatlanish natijasida vujudga keladi. Yaxshi xulqqa ham
+              odat tufayli erishiladi.ss
+            </p>
+            <div class="flex flex-row items-center justify-between flex-nowrap ">
+              <div>
+                <p class="text-gray-400 font-medium text-sm line-clamp-1">Abu
+                  Ali Ibn Sino</p>
+              </div>
+              <div class="flex flex-nowrap items-center space-x-4 hidden lg:block">
+                <button data-tooltip-target="tooltip-default" type="button"
+                  class="rounded-full p-1 text-center text-gray-400 hover:text-gray-900 lg:invisible group-hover:visible">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 " fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </button>
+                <div id="tooltip-default" role="tooltip"
+                  class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip dark:bg-gray-700">
+                  Sevimlilay safiga qo'shish
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+      <p class="text-md text-gray-900 font-medium mb-4">Ushbu loyihaning maqsadi:
+      </p>
+
+      <p class="text-gray-900 font-normal mb-4">
+        <i class="font-medium">Buyuklarning fikr-mulohazalarini, maslahatlarini
+          ushbu sayt orqali
+          foydalanuvchilarning talabidan kelib chiqqan holda topib berish, qiziqtirilgan muallif yoki kalit so'zlarga
+          mos
+          mulohazalarni izlay olish imkoniyati mavjud bo'lgan qulay bir imkoniyat bo'lishidir. Undan tashqari
+          sohalarga
+          mos yoki qaysidir holat uchun ham, turkum mulohazalarni to'plam sifatida taqdim qilib borish.</i>
+      </p>
+
+      <!-- CONTACT US -->
+      <div class="mt-6">
+        <p class="text-gray text-sm font-medium">
+          Biz bilan bo'glanish: <a href="#" class="text-blue-500 ">mana.buyuklar@gmail.com</a>
+        </p>
+        <p class="text-gray text-sm font-medium">
+          Telegram kanalimiz: <a href="#" class="text-blue-500">https://t.me/mana_buyuklar</a>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="flex justify-center border-t py-8   bg-primary-light bg-opacity-5">
+    <div class="container px-6 md:px-24 lg:px-48 xl:px-72">
+
+      <main class="flex flex-col gap-4 justify-center items-center w-full">
+
+        <div class="w-full lg:w-auto">
+          <img src="./assets/svg-logo-01.svg" width="120px" alt="LOGO">
+        </div>
+
+        <div class="w-full lg:w-auto flex flex-wrap sm:flex-nowrap gap-2 lg:gap-4 items-center ">
+          <div class="inline-flex gap-4 w-full ">
+            <span class="w-full text-left sm:w-auto hover:text-gray-900 text-gray-600 whitespace-nowrap">
+              <a href="index.html" class="text-sm font-semibold ">Bosh sahifa</a>
+            </span>
+            <span class="w-full text-left sm:w-auto hover:text-gray-900 text-gray-600 whitespace-nowrap">
+              <a href="RandomQuotes.html" class="text-sm font-semibold ">Tasodifiy tartibda</a>
+            </span>
+          </div>
+          <div class="inline-flex gap-4 w-full ">
+            <span class="w-full text-left sm:w-auto hover:text-gray-900 text-gray-600 whitespace-nowrap">
+              <a href="Authors.html" class="text-sm font-semibold ">Mualliflar</a>
+            </span>
+            <span class="w-full text-left sm:w-auto hover:text-gray-900 text-gray-600 whitespace-nowrap">
+              <a href="Keys.html" class="text-sm font-semibold ">Kalit So'zlar</a>
+            </span>
+          </div>
+          <div class="inline-flex gap-4 w-full ">
+            <span class="w-full text-left sm:w-auto hover:text-gray-900 text-gray-600 whitespace-nowrap">
+              <a href="FavoriteQuotes.html" class="text-sm font-semibold ">Sevimli hikmatlarim</a>
+            </span>
+
+          </div>
+        </div>
+
+        <div class="inline-flex gap-2 lg:gap-4 w-full lg:w-auto">
+          <span class="w-full sm:w-auto hover:text-gray-900 text-gray-600 whitespace-nowrap">
+            <a href="References.html" class="text-sm font-semibold ">Foydalanilgan manbalar</a>
+          </span>
+          <span class="w-full sm:w-auto hover:text-gray-900 text-gray-600 whitespace-nowrap">
+            <a href="AboutUs.html" class="text-sm font-semibold ">Loyiha haqida</a>
+          </span>
+        </div>
+
+      </main>
+
+    </div>
+
+
+    <!-- <div>
+      <span class="text-sm font-semibold text-gray-900">
+        © Hikmatlar.uz. Oz-oz o'rganib dono bulur.
+      </span>
+    </div> -->
+  </footer>
+
+  <!-- NAVIGATIN SLIDER -->
+  <div class="fixed inset-0 max-h-full overflow-hidden bg-red bg-opacity-50" style="display: none" id="slider_bg"
+    aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+    <div class="absolute inset-0 overflow-hidden ">
+
+      <!-- CLOSER -->
+      <div class="absolute inset-0 bg-black bg-opacity-75 transition-opacity overflow-hidden" onclick="closeSlider()"
+        aria-hidden="true"></div>
+
+      <div class="fixed inset-y-0 left-0 max-w-full flex -translate-x-full" id="slider">
+        <div class="relative w-screen max-w-xs sm:max-w-sm">
+
+          <!-- PANEL -->
+          <div class="h-full flex flex-col py-8 px-4 bg-white shadow-xl ">
+            <div class=" flex flex-row flex-nowrap justify-between px-4 items-center p-4">
+              <!-- <h2 class="text-xl font-semibold text-gray-900" id="slide-over-title">
+                Hikmatlar.uz
+              </h2> -->
+              <img src="./assets/svg-logo-01.svg" width="160px" alt="LOGO">
+
+              <!-- SLIDER CLOSER BTN -->
+              <button type="button" onclick="closeSlider()"
+                class="rounded-md text-gray hover:text-gray-light focus:outline-none focus:ring-2 focus:ring-white">
+                <span class="sr-only">Close panel</span>
+                <!-- Heroicon name: outline/x -->
+                <svg class="h-6 w-6 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="flex flex-col justify-between h-[100%]">
+              <ul class=" flex flex-col py-4 gap">
+                <li>
+                  <a href="index.html"
+                    class="flex flex-row items-center h-12 transform  text-gray-500 hover:text-gray-800">
+                    <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        class=" inline-flex items-center justify-center h-5 w-5 text-lg text-gray-900" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                      </svg>
+                    </span>
+                    <span class="text-md font-medium text-gray-900">Bosh sahifa</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="RandomQuotes.html"
+                    class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+                    <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-600">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        class=" inline-flex items-center justify-center h-5 w-5 text-lg text-gray-600" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                      </svg>
+                    </span>
+                    <span class="text-md font-normal text-gray-600">Tasodifiy tartibda</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="Authors.html"
+                    class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+                    <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-600">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        class=" inline-flex items-center justify-center h-5 w-5 text-lg text-gray-600" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                      </svg>
+                    </span>
+                    <span class="text-md font-normal text-gray-600">Mualliflar</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="Keys.html"
+                    class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+                    <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-light">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        class=" inline-flex items-center justify-center h-5 w-5 text-lg text-gray-600" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                      </svg>
+                    </span>
+                    <span class="text-md font-normal text-gray-600">Kalit So'zlar</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="References.html"
+                    class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+                    <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-light">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        class=" inline-flex items-center justify-center h-5 w-5 text-lg text-gray-600" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                      </svg>
+                    </span>
+                    <span class="text-md font-normal text-gray-600">Foydalanilgan manbalar</span>
+                  </a>
+                </li>
+
+              </ul>
+              <li class="list-none">
+                <a href="AboutUs.html"
+                  class="flex flex-row items-center h-12 transform hover:translate-x-2 transition-transform ease-in duration-200 text-gray-500 hover:text-gray-800">
+                  <span class="inline-flex items-center justify-center h-12 w-12 text-lg text-gray-light">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                      class=" inline-flex items-center justify-center h-5 w-5 text-lg text-gray-600" fill="none"
+                      viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </span>
+                  <span class="text-md font-normal text-gray-600">Loyiha haqida</span>
+                </a>
+              </li>
+            </div>
+            <!-- /End replace -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let slider = document.getElementById('slider')
+    let sliderBg = document.getElementById('slider_bg')
+    function show() {
+      console.log("hello")
+
+      slider.style.transform = "translateX(0)"
+      sliderBg.style.display = "block"
+      sliderBg.style.opacity = "100%"
+    }
+
+    function closeSlider() {
+      slider.style.transform = "translateX(-700px)"
+      sliderBg.style.display = "none"
+    }
+  </script>
+  <script src="https://unpkg.com/@themesberg/flowbite@1.2.0/dist/flowbite.bundle.js"></script>
+</body>
+
+</html>
