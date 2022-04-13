@@ -1,7 +1,7 @@
 # HikmatlarUz
 
  <h4 align="center">
-   <a href="http://hikmatlar.uz/" style="text-align: center;" >Live Demo &#x2192;</a>
+   <a href="http://hikmatlar.uz/" style="text-align: center;" >Web site &#x2192;</a>
  </h4>
 
 <h2>Home Page</h2>
